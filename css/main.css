@@ -7,6 +7,7 @@
 
 body {
   font-size: 13px;
+  background-color: #ecf2f8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,6 +20,29 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.card {
+  width: 90%;
+  margin: 6em auto;
+  border-radius: 20px;
+}
+
+.card-img {
+  background-color: blueviolet;
+  min-height: 25vh;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-text {
+  background-color: cadetblue;
+  padding: 1em 2em;
+}
+
+.card-footer {
+  background-color: coral;
+  border-radius: 0 0 10px 10px;
+  padding: 1em 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
