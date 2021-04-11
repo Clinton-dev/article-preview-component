@@ -1,0 +1,40 @@
+@use 'colors';
+
+.card-text {
+  h2 { margin-bottom: .75em; }
+  p { margin-bottom: .75em; }
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.left {
+  display: flex;
+  border-radius: 0 0 10px 0;
+}
+
+.right {
+  border-radius: 0 0 0 10px;
+}
+
+.left-content {
+  margin-left: 1em;
+  padding-top: .5em;
+
+  h5 { padding-bottom: .5em;}
+}
+
+.left img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.right img {
+  background-color: colors.color(secondary);
+  padding: 1em;
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-top: 1em;
+}

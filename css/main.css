@@ -14,6 +14,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Manrope", sans-serif;
 }
 
+p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
 ul {
   list-style: none;
 }
@@ -26,23 +31,88 @@ a {
   width: 90%;
   margin: 6em auto;
   border-radius: 20px;
+  background-color: white;
+}
+@media (min-width: 765px) {
+  .card {
+    width: 60%;
+    display: grid;
+    margin-top: 10em;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
-.card-img {
-  background-color: blueviolet;
-  min-height: 25vh;
-  border-radius: 10px 10px 0 0;
+@media (min-width: 765px) {
+  .card-img {
+    border-radius: 10px 0 0 10px;
+  }
 }
 
 .card-text {
-  background-color: cadetblue;
   padding: 1em 2em;
+}
+@media (min-width: 765px) {
+  .card-text {
+    border-radius: 0 10px 0 0;
+    padding: 1em 3em;
+  }
 }
 
 .card-footer {
-  background-color: coral;
-  border-radius: 0 0 10px 10px;
   padding: 1em 2em;
+}
+@media (max-width: 375px) {
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 765px) {
+  .card-footer {
+    border-radius: 0 0 10px 0;
+  }
+}
+
+.card-text h2 {
+  margin-bottom: 0.75em;
+}
+.card-text p {
+  margin-bottom: 0.75em;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.left {
+  display: flex;
+  border-radius: 0 0 10px 0;
+}
+
+.right {
+  border-radius: 0 0 0 10px;
+}
+
+.left-content {
+  margin-left: 1em;
+  padding-top: 0.5em;
+}
+.left-content h5 {
+  padding-bottom: 0.5em;
+}
+
+.left img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.right img {
+  background-color: #9eafc2;
+  padding: 1em;
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */
