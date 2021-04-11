@@ -1,10 +1,63 @@
-$colors: (
-  primary: hsl(217, 19%, 35%),
-  primary2: hsl(214, 17%, 51%),
-  secondary: hsl(212, 23%, 69%),
-  secondary2: hsl(210, 46%, 95%)
-);
+$border: 10px;
+$card-padding: 1em;
 
-@function color($color-name) {
-  @return map-get($colors, $color-name);
+@mixin for-phone {
+  @media (max-width: 375px) { @content; }
+}
+
+@mixin for-phone-up {
+  @media (min-width: 376px) { @content; }
+}
+
+@mixin for-tablet-up{
+  @media (min-width: 765px) { @content; }
+}
+
+@mixin for-desktop {
+  @media (min-width: 1440px) { @content; }
+}
+
+.card {
+  width: 90%;
+  margin: 6em auto;
+  border-radius: 20px;
+  background-color: white;
+
+  @include for-tablet-up() {
+     width: 60%;
+     display: grid;
+     margin-top: 10em;
+     grid-template-columns: 1fr 2fr;
+  }
+}
+
+.card-img {
+  
+  @include for-tablet-up() {
+    border-radius: $border 0 0 $border;
+  }
+}
+
+.card-text {
+  padding: $card-padding $card-padding * 2;
+  
+  @include for-tablet-up() {
+    border-radius: 0 $border 0 0;
+    padding: $card-padding $card-padding * 3;
+  }
+}
+
+.card-footer {
+  padding: $card-padding $card-padding * 2;
+  
+  @include for-phone() {
+    display: flex;
+    justify-content: space-between;
+    // border-radius: 0 0 $border $border;
+  }
+  
+  @include for-tablet-up() {
+    border-radius: 0 0 $border 0;
+    // padding: $card-padding $card-padding * 3;
+  }
 }
