@@ -13,12 +13,17 @@ body {
   background-color: colors.color(secondary2);
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Manrope', sans-serif;
+  color: colors.color(primary);
+}
 
 p { 
   font-family: 'Manrope', sans-serif;
   font-weight: 500;
+  color: colors.color(primary2);
 }
+
 ul { list-style: none; }
 
 a { text-decoration: none; }
